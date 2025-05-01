@@ -1,7 +1,9 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public partial class GenericModalWindow : MonoBehaviour
 {
     public Sprite sprite;
