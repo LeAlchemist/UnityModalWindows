@@ -15,7 +15,7 @@ public partial class GenericModalWindow : MonoBehaviour
 
     public void SetFooterArea()
     {
-        _footerArea = GetComponent<Transform>();
+        _footerArea = this.gameObject.transform.GetChild(0).GetChild(2);
     }
 
     //will need to create a new button visually and assign it to the array
@@ -25,6 +25,11 @@ public partial class GenericModalWindow : MonoBehaviour
     }
 
     public void RemoveButtons()
+    {
+
+    }
+
+    public void GetButtons()
     {
 
     }

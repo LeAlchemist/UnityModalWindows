@@ -7,15 +7,16 @@ public partial class GenericModalWindow : MonoBehaviour
     [SerializeField]
     private Transform _headerArea;
     [SerializeField]
-    private TextMeshPro _headerText;
+    private TextMeshProUGUI _headerText;
 
     public void SetHeaderArea()
     {
-        _headerArea = GetComponent<Transform>();
+        _headerArea = this.gameObject.transform.GetChild(0).GetChild(0);
+        _headerText = _headerArea.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
     }
 
-    public void SetHeaderText()
+    public void SetHeaderText(string headerText)
     {
-
+        _headerText.text = headerText;
     }
 }
