@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteInEditMode]
 public partial class GenericModalWindow : MonoBehaviour
 {
     public Sprite sprite;
@@ -22,12 +21,18 @@ public partial class GenericModalWindow : MonoBehaviour
         {
             SetFooterArea();
         }
+
+        //this is for testing 
+        ShowAsPrompt(title: "Test", message: "This is a test as a prompt");
+        AddButtons(buttonName: "Test");
+        AddButtons(buttonName: "Test 2", buttonColor: new Color(0, 255, 255, 255), textColor: new Color(255, 0, 255, 255));
+        AddButtons(buttonName: "Test 3");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        RefreshContent();
     }
 
     public void ShowAsPopup(string title)
